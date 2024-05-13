@@ -73,35 +73,38 @@
             // Them_btn
             // 
             this.Them_btn.AutoSize = true;
+            this.Them_btn.BackColor = System.Drawing.Color.LightGreen;
             this.Them_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Them_btn.Location = new System.Drawing.Point(354, 126);
             this.Them_btn.Name = "Them_btn";
             this.Them_btn.Size = new System.Drawing.Size(77, 35);
             this.Them_btn.TabIndex = 1;
             this.Them_btn.Text = "Thêm";
-            this.Them_btn.UseVisualStyleBackColor = true;
+            this.Them_btn.UseVisualStyleBackColor = false;
             // 
             // Sua_btn
             // 
             this.Sua_btn.AutoSize = true;
+            this.Sua_btn.BackColor = System.Drawing.Color.SandyBrown;
             this.Sua_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sua_btn.Location = new System.Drawing.Point(659, 126);
             this.Sua_btn.Name = "Sua_btn";
             this.Sua_btn.Size = new System.Drawing.Size(77, 35);
             this.Sua_btn.TabIndex = 1;
             this.Sua_btn.Text = "Sửa";
-            this.Sua_btn.UseVisualStyleBackColor = true;
+            this.Sua_btn.UseVisualStyleBackColor = false;
             // 
             // Xoa_btn
             // 
             this.Xoa_btn.AutoSize = true;
+            this.Xoa_btn.BackColor = System.Drawing.Color.Tomato;
             this.Xoa_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Xoa_btn.Location = new System.Drawing.Point(502, 126);
             this.Xoa_btn.Name = "Xoa_btn";
             this.Xoa_btn.Size = new System.Drawing.Size(77, 35);
             this.Xoa_btn.TabIndex = 1;
             this.Xoa_btn.Text = "Xóa";
-            this.Xoa_btn.UseVisualStyleBackColor = true;
+            this.Xoa_btn.UseVisualStyleBackColor = false;
             // 
             // TenHS_lb
             // 
@@ -132,6 +135,7 @@
             this.label2.Size = new System.Drawing.Size(88, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Giới tính:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // MaHS_lb
             // 
