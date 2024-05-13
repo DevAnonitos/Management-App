@@ -21,5 +21,20 @@ namespace QuanLyLop
         {
 
         }
+
+        private void MaLop_txb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ho_txb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ho_lb_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

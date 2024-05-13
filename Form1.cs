@@ -31,5 +31,15 @@ namespace QuanLyLop
         {
 
         }
+
+        private void SLHS_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
