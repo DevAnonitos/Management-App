@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView_QLHS = new System.Windows.Forms.DataGridView();
+            this.maHSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenHSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoHSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hocSinhBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.quảnlíLớpvàHọcSinhDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quản_lí_Lớp_và_Học_SinhDataSet = new QuanLyLop.Quản_lí_Lớp_và_Học_SinhDataSet();
+            this.hocSinhBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.Them_btn = new System.Windows.Forms.Button();
             this.Sua_btn = new System.Windows.Forms.Button();
             this.Xoa_btn = new System.Windows.Forms.Button();
@@ -47,8 +58,22 @@
             this.MaLop_txb = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.hocSinhBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.quản_lý_lớp_và_sinh_viênDataSet = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSet();
+            this.hocSinhBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hocSinhTableAdapter = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.HocSinhTableAdapter();
+            this.hocSinhTableAdapter1 = new QuanLyLop.Quản_lí_Lớp_và_Học_SinhDataSetTableAdapters.HocSinhTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLHS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quảnlíLớpvàHọcSinhDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quản_lí_Lớp_và_Học_SinhDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -64,13 +89,86 @@
             // 
             // dataGridView_QLHS
             // 
+            this.dataGridView_QLHS.AutoGenerateColumns = false;
+            this.dataGridView_QLHS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_QLHS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_QLHS.Location = new System.Drawing.Point(7, 27);
+            this.dataGridView_QLHS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHSDataGridViewTextBoxColumn,
+            this.tenHSDataGridViewTextBoxColumn,
+            this.hoHSDataGridViewTextBoxColumn,
+            this.gioiTinhDataGridViewTextBoxColumn,
+            this.ngaySinhDataGridViewTextBoxColumn,
+            this.maLopDataGridViewTextBoxColumn});
+            this.dataGridView_QLHS.DataSource = this.hocSinhBindingSource4;
+            this.dataGridView_QLHS.Location = new System.Drawing.Point(6, 26);
             this.dataGridView_QLHS.Name = "dataGridView_QLHS";
             this.dataGridView_QLHS.RowHeadersWidth = 51;
             this.dataGridView_QLHS.RowTemplate.Height = 24;
-            this.dataGridView_QLHS.Size = new System.Drawing.Size(889, 236);
+            this.dataGridView_QLHS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_QLHS.Size = new System.Drawing.Size(884, 236);
             this.dataGridView_QLHS.TabIndex = 0;
+            // 
+            // maHSDataGridViewTextBoxColumn
+            // 
+            this.maHSDataGridViewTextBoxColumn.DataPropertyName = "MaHS";
+            this.maHSDataGridViewTextBoxColumn.HeaderText = "MaHS";
+            this.maHSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maHSDataGridViewTextBoxColumn.Name = "maHSDataGridViewTextBoxColumn";
+            // 
+            // tenHSDataGridViewTextBoxColumn
+            // 
+            this.tenHSDataGridViewTextBoxColumn.DataPropertyName = "TenHS";
+            this.tenHSDataGridViewTextBoxColumn.HeaderText = "TenHS";
+            this.tenHSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenHSDataGridViewTextBoxColumn.Name = "tenHSDataGridViewTextBoxColumn";
+            // 
+            // hoHSDataGridViewTextBoxColumn
+            // 
+            this.hoHSDataGridViewTextBoxColumn.DataPropertyName = "HoHS";
+            this.hoHSDataGridViewTextBoxColumn.HeaderText = "HoHS";
+            this.hoHSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hoHSDataGridViewTextBoxColumn.Name = "hoHSDataGridViewTextBoxColumn";
+            // 
+            // gioiTinhDataGridViewTextBoxColumn
+            // 
+            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
+            // 
+            // ngaySinhDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
+            // 
+            // maLopDataGridViewTextBoxColumn
+            // 
+            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.HeaderText = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
+            // 
+            // hocSinhBindingSource4
+            // 
+            this.hocSinhBindingSource4.DataMember = "HocSinh";
+            this.hocSinhBindingSource4.DataSource = this.quảnlíLớpvàHọcSinhDataSetBindingSource;
+            // 
+            // quảnlíLớpvàHọcSinhDataSetBindingSource
+            // 
+            this.quảnlíLớpvàHọcSinhDataSetBindingSource.DataSource = this.quản_lí_Lớp_và_Học_SinhDataSet;
+            this.quảnlíLớpvàHọcSinhDataSetBindingSource.Position = 0;
+            // 
+            // quản_lí_Lớp_và_Học_SinhDataSet
+            // 
+            this.quản_lí_Lớp_và_Học_SinhDataSet.DataSetName = "Quản_lí_Lớp_và_Học_SinhDataSet";
+            this.quản_lí_Lớp_và_Học_SinhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hocSinhBindingSource3
+            // 
+            this.hocSinhBindingSource3.DataMember = "HocSinh";
+            this.hocSinhBindingSource3.DataSource = this.quản_lí_Lớp_và_Học_SinhDataSet;
             // 
             // Them_btn
             // 
@@ -83,6 +181,7 @@
             this.Them_btn.TabIndex = 1;
             this.Them_btn.Text = "Thêm";
             this.Them_btn.UseVisualStyleBackColor = false;
+            this.Them_btn.Click += new System.EventHandler(this.Them_btn_Click);
             // 
             // Sua_btn
             // 
@@ -95,6 +194,7 @@
             this.Sua_btn.TabIndex = 1;
             this.Sua_btn.Text = "Sửa";
             this.Sua_btn.UseVisualStyleBackColor = false;
+            this.Sua_btn.Click += new System.EventHandler(this.Sua_btn_Click);
             // 
             // Xoa_btn
             // 
@@ -107,6 +207,7 @@
             this.Xoa_btn.TabIndex = 1;
             this.Xoa_btn.Text = "Xóa";
             this.Xoa_btn.UseVisualStyleBackColor = false;
+            this.Xoa_btn.Click += new System.EventHandler(this.Xoa_btn_Click);
             // 
             // TenHS_lb
             // 
@@ -127,7 +228,6 @@
             this.Ho_lb.Size = new System.Drawing.Size(43, 25);
             this.Ho_lb.TabIndex = 2;
             this.Ho_lb.Text = "Họ:";
-            this.Ho_lb.Click += new System.EventHandler(this.Ho_lb_Click);
             // 
             // label2
             // 
@@ -138,7 +238,6 @@
             this.label2.Size = new System.Drawing.Size(88, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Giới tính:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // MaHS_lb
             // 
@@ -228,8 +327,37 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(382, 50);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Thông tin học sinh ";
+            this.button1.Text = "Quản Lý Lớp";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // hocSinhBindingSource2
+            // 
+            this.hocSinhBindingSource2.DataMember = "HocSinh";
+            this.hocSinhBindingSource2.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
+            // 
+            // quản_lý_lớp_và_sinh_viênDataSet
+            // 
+            this.quản_lý_lớp_và_sinh_viênDataSet.DataSetName = "Quản_lý_lớp_và_sinh_viênDataSet";
+            this.quản_lý_lớp_và_sinh_viênDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hocSinhBindingSource1
+            // 
+            this.hocSinhBindingSource1.DataMember = "HocSinh";
+            this.hocSinhBindingSource1.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
+            // 
+            // hocSinhBindingSource
+            // 
+            this.hocSinhBindingSource.DataMember = "HocSinh";
+            this.hocSinhBindingSource.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
+            // 
+            // hocSinhTableAdapter
+            // 
+            this.hocSinhTableAdapter.ClearBeforeFill = true;
+            // 
+            // hocSinhTableAdapter1
+            // 
+            this.hocSinhTableAdapter1.ClearBeforeFill = true;
             // 
             // Form2
             // 
@@ -256,8 +384,17 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "QLHS_Form";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLHS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quảnlíLớpvàHọcSinhDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quản_lí_Lớp_và_Học_SinhDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +420,21 @@
         private System.Windows.Forms.TextBox MaLop_txb;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
+        private Quản_lý_lớp_và_sinh_viênDataSet quản_lý_lớp_và_sinh_viênDataSet;
+        private System.Windows.Forms.BindingSource hocSinhBindingSource;
+        private Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
+        private System.Windows.Forms.BindingSource hocSinhBindingSource1;
+        private System.Windows.Forms.BindingSource hocSinhBindingSource2;
+        private Quản_lí_Lớp_và_Học_SinhDataSet quản_lí_Lớp_và_Học_SinhDataSet;
+        private System.Windows.Forms.BindingSource hocSinhBindingSource3;
+        private Quản_lí_Lớp_và_Học_SinhDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenHSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoHSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maLopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource hocSinhBindingSource4;
+        private System.Windows.Forms.BindingSource quảnlíLớpvàHọcSinhDataSetBindingSource;
     }
 }
