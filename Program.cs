@@ -16,6 +16,7 @@ namespace QuanLyLop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new QLLop_Form());
             Application.Run(new QLLop_Form());
         }
     }
