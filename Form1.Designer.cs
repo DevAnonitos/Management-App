@@ -53,9 +53,9 @@
             this.quảnlíLớpvàHọcSinhDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quản_lí_Lớp_và_Học_SinhDataSet = new QuanLyLop.Quản_lí_Lớp_và_Học_SinhDataSet();
             this.lopBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quản_lý_lớp_và_sinh_viênDataSet = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSet();
+            //this.quản_lý_lớp_và_sinh_viênDataSet = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSet();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.lopTableAdapter = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.LopTableAdapter();
+            //this.lopTableAdapter = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.LopTableAdapter();
             this.lOPBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.lOPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lOPTableAdapter1 = new QuanLyLop.Quản_lí_Lớp_và_Học_SinhDataSetTableAdapters.lOPTableAdapter();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.quảnlíLớpvàHọcSinhDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quản_lí_Lớp_và_Học_SinhDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -281,12 +281,12 @@
             // lopBindingSource
             // 
             this.lopBindingSource.DataMember = "Lop";
-            this.lopBindingSource.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
+            //this.lopBindingSource.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
             // 
             // quản_lý_lớp_và_sinh_viênDataSet
             // 
-            this.quản_lý_lớp_và_sinh_viênDataSet.DataSetName = "Quản_lý_lớp_và_sinh_viênDataSet";
-            this.quản_lý_lớp_và_sinh_viênDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.quản_lý_lớp_và_sinh_viênDataSet.DataSetName = "Quản_lý_lớp_và_sinh_viênDataSet";
+            //this.quản_lý_lớp_và_sinh_viênDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // hScrollBar1
             // 
@@ -297,7 +297,7 @@
             // 
             // lopTableAdapter
             // 
-            this.lopTableAdapter.ClearBeforeFill = true;
+            //this.lopTableAdapter.ClearBeforeFill = true;
             // 
             // lOPBindingSource2
             // 
@@ -344,7 +344,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.quảnlíLớpvàHọcSinhDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quản_lí_Lớp_và_Học_SinhDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -369,9 +369,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView QuanLyLop_gridView;
         private System.Windows.Forms.HScrollBar hScrollBar1;
-        private Quản_lý_lớp_và_sinh_viênDataSet quản_lý_lớp_và_sinh_viênDataSet;
+        //private Quản_lý_lớp_và_sinh_viênDataSet quản_lý_lớp_và_sinh_viênDataSet;
         private System.Windows.Forms.BindingSource lopBindingSource;
-        private Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.LopTableAdapter lopTableAdapter;
+        //private Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.LopTableAdapter lopTableAdapter;
         private Quản_lí_Lớp_và_Học_SinhDataSet quản_lí_Lớp_và_Học_SinhDataSet;
         private System.Windows.Forms.BindingSource lOPBindingSource1;
         private Quản_lí_Lớp_và_Học_SinhDataSetTableAdapters.lOPTableAdapter lOPTableAdapter1;

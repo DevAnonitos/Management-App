@@ -59,10 +59,10 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.hocSinhBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.quản_lý_lớp_và_sinh_viênDataSet = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSet();
+            //this.quản_lý_lớp_và_sinh_viênDataSet = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSet();
             this.hocSinhBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hocSinhTableAdapter = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.HocSinhTableAdapter();
+            //this.hocSinhTableAdapter = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.HocSinhTableAdapter();
             this.hocSinhTableAdapter1 = new QuanLyLop.Quản_lí_Lớp_và_Học_SinhDataSetTableAdapters.HocSinhTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLHS)).BeginInit();
@@ -71,7 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.quản_lí_Lớp_và_Học_SinhDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -337,26 +337,26 @@
             // hocSinhBindingSource2
             // 
             this.hocSinhBindingSource2.DataMember = "HocSinh";
-            this.hocSinhBindingSource2.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
+            //this.hocSinhBindingSource2.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
             // 
             // quản_lý_lớp_và_sinh_viênDataSet
             // 
-            this.quản_lý_lớp_và_sinh_viênDataSet.DataSetName = "Quản_lý_lớp_và_sinh_viênDataSet";
-            this.quản_lý_lớp_và_sinh_viênDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.quản_lý_lớp_và_sinh_viênDataSet.DataSetName = "Quản_lý_lớp_và_sinh_viênDataSet";
+            //this.quản_lý_lớp_và_sinh_viênDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // hocSinhBindingSource1
             // 
             this.hocSinhBindingSource1.DataMember = "HocSinh";
-            this.hocSinhBindingSource1.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
+            //this.hocSinhBindingSource1.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
             // 
             // hocSinhBindingSource
             // 
             this.hocSinhBindingSource.DataMember = "HocSinh";
-            this.hocSinhBindingSource.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
+            //this.hocSinhBindingSource.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
             // 
             // hocSinhTableAdapter
             // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
+            //this.hocSinhTableAdapter.ClearBeforeFill = true;
             // 
             // hocSinhTableAdapter1
             // 
@@ -395,7 +395,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.quản_lí_Lớp_và_Học_SinhDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -423,9 +423,9 @@
         private System.Windows.Forms.TextBox MaLop_txb;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
-        private Quản_lý_lớp_và_sinh_viênDataSet quản_lý_lớp_và_sinh_viênDataSet;
+        //private Quản_lý_lớp_và_sinh_viênDataSet quản_lý_lớp_và_sinh_viênDataSet;
         private System.Windows.Forms.BindingSource hocSinhBindingSource;
-        private Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
+        //private Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
         private System.Windows.Forms.BindingSource hocSinhBindingSource1;
         private System.Windows.Forms.BindingSource hocSinhBindingSource2;
         private Quản_lí_Lớp_và_Học_SinhDataSet quản_lí_Lớp_và_Học_SinhDataSet;

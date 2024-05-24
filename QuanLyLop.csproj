@@ -72,11 +72,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Quản_lí_Lớp_và_Học_SinhDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Quản_lý_lớp_và_sinh_viênDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Quản_lý_lớp_và_sinh_viênDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,17 +106,6 @@
     </None>
     <None Include="Quản_lí_Lớp_và_Học_SinhDataSet.xss">
       <DependentUpon>Quản_lí_Lớp_và_Học_SinhDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Quản_lý_lớp_và_sinh_viênDataSet.xsc">
-      <DependentUpon>Quản_lý_lớp_và_sinh_viênDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Quản_lý_lớp_và_sinh_viênDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Quản_lý_lớp_và_sinh_viênDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Quản_lý_lớp_và_sinh_viênDataSet.xss">
-      <DependentUpon>Quản_lý_lớp_và_sinh_viênDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
