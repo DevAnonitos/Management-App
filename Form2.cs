@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,6 +19,11 @@ namespace QuanLyLop
         }
 
         Modify modify = new Modify();
+
+        public bool CheckInformation(string ac) // Check mk va tk
+        {
+            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$"); //Ràng buộc tên tài khoản va mk
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +78,24 @@ namespace QuanLyLop
             string gioiTinh = GioiTinh_txb.Text;
             DateTime ngaySinh = dateTimePicker1.Value;
 
+            if (!CheckInformation(tenHS))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(hoHS))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(gioiTinh))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
 
             HocSinh hocsinh = new HocSinh(tenHS, hoHS, gioiTinh, maHS, maLop, ngaySinh);
             if (modify.insertHS(hocsinh))
@@ -98,6 +122,24 @@ namespace QuanLyLop
             string gioiTinh = GioiTinh_txb.Text;
             DateTime ngaySinh = dateTimePicker1.Value;
 
+            if (!CheckInformation(tenHS))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(hoHS))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(gioiTinh))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
             HocSinh hocsinh = new HocSinh(tenHS, hoHS, gioiTinh, maHS, maLop, ngaySinh);
 
             if (modify.updateHS(hocsinh))
@@ -123,6 +165,34 @@ namespace QuanLyLop
             else
             {
                 MessageBox.Show("Khong the xoa vao csdl", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void MaLop_txb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            //khi người dùng bấm số và xóa số thì được thao tác
+            //Nếu người dùng nhập chữ thì hệ thống sẽ chặn và ko cho người dùng bấm
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void MaHS_txb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            //khi người dùng bấm số và xóa số thì được thao tác
+            //Nếu người dùng nhập chữ thì hệ thống sẽ chặn và ko cho người dùng bấm
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }

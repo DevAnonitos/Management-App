@@ -301,6 +301,7 @@
             this.MaHS_txb.Name = "MaHS_txb";
             this.MaHS_txb.Size = new System.Drawing.Size(100, 27);
             this.MaHS_txb.TabIndex = 3;
+            this.MaHS_txb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaHS_txb_KeyPress);
             // 
             // MaLop_txb
             // 
@@ -310,6 +311,7 @@
             this.MaLop_txb.Size = new System.Drawing.Size(100, 27);
             this.MaLop_txb.TabIndex = 3;
             this.MaLop_txb.TextChanged += new System.EventHandler(this.MaLop_txb_TextChanged);
+            this.MaLop_txb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaLop_txb_KeyPress);
             // 
             // dateTimePicker1
             // 
