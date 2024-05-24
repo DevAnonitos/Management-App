@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLLop_Form));
             this.MaLop_tb = new System.Windows.Forms.TextBox();
             this.TenLop_tb = new System.Windows.Forms.TextBox();
@@ -44,9 +45,29 @@
             this.QLSV_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.QuanLyLop_gridView = new System.Windows.Forms.DataGridView();
+            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenGVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLuongHSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOPBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.quảnlíLớpvàHọcSinhDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quản_lí_Lớp_và_Học_SinhDataSet = new QuanLyLop.Quản_lí_Lớp_và_Học_SinhDataSet();
+            this.lopBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.quản_lý_lớp_và_sinh_viênDataSet = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSet();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            //this.lopTableAdapter = new QuanLyLop.Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.LopTableAdapter();
+            this.lOPBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.lOPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lOPTableAdapter1 = new QuanLyLop.Quản_lí_Lớp_và_Học_SinhDataSetTableAdapters.lOPTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLyLop_gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quảnlíLớpvàHọcSinhDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quản_lí_Lớp_và_Học_SinhDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // MaLop_tb
@@ -55,6 +76,7 @@
             this.MaLop_tb.Name = "MaLop_tb";
             this.MaLop_tb.Size = new System.Drawing.Size(185, 22);
             this.MaLop_tb.TabIndex = 1;
+            this.MaLop_tb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaLop_tb_KeyPress);
             // 
             // TenLop_tb
             // 
@@ -77,6 +99,7 @@
             this.SLHS_tb.Size = new System.Drawing.Size(120, 22);
             this.SLHS_tb.TabIndex = 2;
             this.SLHS_tb.TextChanged += new System.EventHandler(this.SLHS_tb_TextChanged);
+            this.SLHS_tb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SLHS_tb_KeyPress);
             // 
             // label1
             // 
@@ -138,6 +161,7 @@
             this.Them_btn.TabIndex = 5;
             this.Them_btn.Text = "Thêm";
             this.Them_btn.UseVisualStyleBackColor = false;
+            this.Them_btn.Click += new System.EventHandler(this.Them_btn_Click);
             // 
             // Xoa_btn
             // 
@@ -150,6 +174,7 @@
             this.Xoa_btn.TabIndex = 5;
             this.Xoa_btn.Text = "Xóa";
             this.Xoa_btn.UseVisualStyleBackColor = false;
+            this.Xoa_btn.Click += new System.EventHandler(this.Xoa_btn_Click);
             // 
             // Sua_btn
             // 
@@ -176,7 +201,7 @@
             this.QLSV_btn.TabIndex = 5;
             this.QLSV_btn.Text = "QL Học Sinh";
             this.QLSV_btn.UseVisualStyleBackColor = false;
-            this.QLSV_btn.Click += new System.EventHandler(this.Sua_btn_Click);
+            this.QLSV_btn.Click += new System.EventHandler(this.QLSV_btn_Click);
             // 
             // groupBox1
             // 
@@ -192,13 +217,76 @@
             // 
             // QuanLyLop_gridView
             // 
+            this.QuanLyLop_gridView.AutoGenerateColumns = false;
+            this.QuanLyLop_gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.QuanLyLop_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.QuanLyLop_gridView.Location = new System.Drawing.Point(-1, 40);
+            this.QuanLyLop_gridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maLopDataGridViewTextBoxColumn,
+            this.tenLopDataGridViewTextBoxColumn,
+            this.tenGVDataGridViewTextBoxColumn,
+            this.sLuongHSDataGridViewTextBoxColumn});
+            this.QuanLyLop_gridView.DataSource = this.lOPBindingSource3;
+            this.QuanLyLop_gridView.Location = new System.Drawing.Point(6, 40);
             this.QuanLyLop_gridView.Name = "QuanLyLop_gridView";
             this.QuanLyLop_gridView.RowHeadersWidth = 51;
             this.QuanLyLop_gridView.RowTemplate.Height = 24;
+            this.QuanLyLop_gridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.QuanLyLop_gridView.Size = new System.Drawing.Size(1029, 314);
             this.QuanLyLop_gridView.TabIndex = 0;
+            this.QuanLyLop_gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QuanLyLop_gridView_CellContentClick);
+            // 
+            // maLopDataGridViewTextBoxColumn
+            // 
+            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.HeaderText = "MaLop";
+            this.maLopDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
+            // 
+            // tenLopDataGridViewTextBoxColumn
+            // 
+            this.tenLopDataGridViewTextBoxColumn.DataPropertyName = "TenLop";
+            this.tenLopDataGridViewTextBoxColumn.HeaderText = "TenLop";
+            this.tenLopDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenLopDataGridViewTextBoxColumn.Name = "tenLopDataGridViewTextBoxColumn";
+            // 
+            // tenGVDataGridViewTextBoxColumn
+            // 
+            this.tenGVDataGridViewTextBoxColumn.DataPropertyName = "TenGV";
+            this.tenGVDataGridViewTextBoxColumn.HeaderText = "TenGV";
+            this.tenGVDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenGVDataGridViewTextBoxColumn.Name = "tenGVDataGridViewTextBoxColumn";
+            // 
+            // sLuongHSDataGridViewTextBoxColumn
+            // 
+            this.sLuongHSDataGridViewTextBoxColumn.DataPropertyName = "SLuongHS";
+            this.sLuongHSDataGridViewTextBoxColumn.HeaderText = "SLuongHS";
+            this.sLuongHSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sLuongHSDataGridViewTextBoxColumn.Name = "sLuongHSDataGridViewTextBoxColumn";
+            // 
+            // lOPBindingSource3
+            // 
+            this.lOPBindingSource3.DataMember = "lOP";
+            this.lOPBindingSource3.DataSource = this.quảnlíLớpvàHọcSinhDataSetBindingSource;
+            // 
+            // quảnlíLớpvàHọcSinhDataSetBindingSource
+            // 
+            this.quảnlíLớpvàHọcSinhDataSetBindingSource.DataSource = this.quản_lí_Lớp_và_Học_SinhDataSet;
+            this.quảnlíLớpvàHọcSinhDataSetBindingSource.Position = 0;
+            // 
+            // quản_lí_Lớp_và_Học_SinhDataSet
+            // 
+            this.quản_lí_Lớp_và_Học_SinhDataSet.DataSetName = "Quản_lí_Lớp_và_Học_SinhDataSet";
+            this.quản_lí_Lớp_và_Học_SinhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lopBindingSource
+            // 
+            this.lopBindingSource.DataMember = "Lop";
+            //this.lopBindingSource.DataSource = this.quản_lý_lớp_và_sinh_viênDataSet;
+            // 
+            // quản_lý_lớp_và_sinh_viênDataSet
+            // 
+            //this.quản_lý_lớp_và_sinh_viênDataSet.DataSetName = "Quản_lý_lớp_và_sinh_viênDataSet";
+            //this.quản_lý_lớp_và_sinh_viênDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // hScrollBar1
             // 
@@ -206,6 +294,24 @@
             this.hScrollBar1.Name = "hScrollBar1";
             this.hScrollBar1.Size = new System.Drawing.Size(8, 8);
             this.hScrollBar1.TabIndex = 7;
+            // 
+            // lopTableAdapter
+            // 
+            //this.lopTableAdapter.ClearBeforeFill = true;
+            // 
+            // lOPBindingSource2
+            // 
+            this.lOPBindingSource2.DataMember = "lOP";
+            this.lOPBindingSource2.DataSource = this.quản_lí_Lớp_và_Học_SinhDataSet;
+            // 
+            // lOPBindingSource1
+            // 
+            this.lOPBindingSource1.DataMember = "lOP";
+            this.lOPBindingSource1.DataSource = this.quản_lí_Lớp_và_Học_SinhDataSet;
+            // 
+            // lOPTableAdapter1
+            // 
+            this.lOPTableAdapter1.ClearBeforeFill = true;
             // 
             // QLLop_Form
             // 
@@ -234,6 +340,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.QuanLyLop_gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quảnlíLớpvàHọcSinhDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quản_lí_Lớp_và_Học_SinhDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.quản_lý_lớp_và_sinh_viênDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +369,19 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView QuanLyLop_gridView;
         private System.Windows.Forms.HScrollBar hScrollBar1;
+        //private Quản_lý_lớp_và_sinh_viênDataSet quản_lý_lớp_và_sinh_viênDataSet;
+        private System.Windows.Forms.BindingSource lopBindingSource;
+        //private Quản_lý_lớp_và_sinh_viênDataSetTableAdapters.LopTableAdapter lopTableAdapter;
+        private Quản_lí_Lớp_và_Học_SinhDataSet quản_lí_Lớp_và_Học_SinhDataSet;
+        private System.Windows.Forms.BindingSource lOPBindingSource1;
+        private Quản_lí_Lớp_và_Học_SinhDataSetTableAdapters.lOPTableAdapter lOPTableAdapter1;
+        private System.Windows.Forms.BindingSource lOPBindingSource2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maLopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenLopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenGVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sLuongHSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource lOPBindingSource3;
+        private System.Windows.Forms.BindingSource quảnlíLớpvàHọcSinhDataSetBindingSource;
     }
 }
 
