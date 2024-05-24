@@ -28,7 +28,7 @@ namespace QuanLyLop
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quản_lí_Lớp_và_Học_SinhDataSet.lOP' table. You can move, or remove it, as needed.
-            this.lOPTableAdapter1.Fill(this.quản_lí_Lớp_và_Học_SinhDataSet.lOP);
+            //this.lOPTableAdapter1.Fill(this.quản_lí_Lớp_và_Học_SinhDataSet.lOP);
             // TODO: This line of code loads data into the 'quản_lý_lớp_và_sinh_viênDataSet.Lop' table. You can move, or remove it, as needed.
             //this.lopTableAdapter.Fill(this.quản_lý_lớp_và_sinh_viênDataSet.Lop);          
             try
