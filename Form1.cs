@@ -23,7 +23,7 @@ namespace QuanLyLop
         Modify modify = new Modify();
         public bool CheckInformation(string ac) // Check mk va tk
         {
-            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$"); //Ràng buộc tên tài khoản va mk
+            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{1,24}$"); //Ràng buộc tên tài khoản va mk
         }
         private void Form1_Load(object sender, EventArgs e)
         {

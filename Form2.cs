@@ -22,7 +22,12 @@ namespace QuanLyLop
 
         public bool CheckInformation(string ac) // Check mk va tk
         {
-            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$"); //Ràng buộc tên tài khoản va mk
+            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{1,24}$"); //Ràng buộc tên tài khoản va mk
+        }
+
+        public bool CheckGioiTinh(string ac) 
+        {
+            return Regex.IsMatch(ac, @"^(N|n)(am|u)?$");
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -90,9 +95,17 @@ namespace QuanLyLop
                 return;
             }
 
-            if (!CheckInformation(gioiTinh))
+
+
+            //if (!CheckInformation(gioiTinh))
+            //{
+            //    MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+            //    return;
+            //}
+
+            if (!CheckGioiTinh(gioiTinh))
             {
-                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                MessageBox.Show("Vui long nhap male hay female");
                 return;
             }
 
@@ -194,6 +207,11 @@ namespace QuanLyLop
             {
                 e.Handled = true;
             }
+        }
+
+        private void GioiTinh_txb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

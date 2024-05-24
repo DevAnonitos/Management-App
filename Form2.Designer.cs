@@ -293,6 +293,7 @@
             this.GioiTinh_txb.Name = "GioiTinh_txb";
             this.GioiTinh_txb.Size = new System.Drawing.Size(100, 27);
             this.GioiTinh_txb.TabIndex = 3;
+            this.GioiTinh_txb.TextChanged += new System.EventHandler(this.GioiTinh_txb_TextChanged);
             // 
             // MaHS_txb
             // 
