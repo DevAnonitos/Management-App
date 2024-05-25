@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -20,10 +21,14 @@ namespace QuanLyLop
         }
 
         Modify modify = new Modify();
+        public bool CheckInformation(string ac) // Check mk va tk
+        {
+            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{1,24}$"); //Ràng buộc tên tài khoản va mk
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quản_lí_Lớp_và_Học_SinhDataSet.lOP' table. You can move, or remove it, as needed.
-            this.lOPTableAdapter1.Fill(this.quản_lí_Lớp_và_Học_SinhDataSet.lOP);
+            //this.lOPTableAdapter1.Fill(this.quản_lí_Lớp_và_Học_SinhDataSet.lOP);
             // TODO: This line of code loads data into the 'quản_lý_lớp_và_sinh_viênDataSet.Lop' table. You can move, or remove it, as needed.
             //this.lopTableAdapter.Fill(this.quản_lý_lớp_và_sinh_viênDataSet.Lop);          
             try
@@ -49,6 +54,17 @@ namespace QuanLyLop
             string tenLop = TenLop_tb.Text;
             int soLHS = Int32.Parse(SLHS_tb.Text);
 
+            if (!CheckInformation(tenGV))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(tenLop))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
 
             Lop lop = new Lop(maLop, tenGV, tenLop, soLHS);
 
@@ -85,6 +101,19 @@ namespace QuanLyLop
             string tenLop = TenLop_tb.Text;
             int soLHS = Int32.Parse(SLHS_tb.Text);
 
+            if (!CheckInformation(tenGV))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(tenLop))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+
             Lop lop = new Lop(maLop, tenGV, tenLop, soLHS);
             if (modify.insertLop(lop))
             {
@@ -119,6 +148,34 @@ namespace QuanLyLop
             else
             {
                 MessageBox.Show("Khong the xoa vao csdl", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void MaLop_tb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            //khi người dùng bấm số và xóa số thì được thao tác
+            //Nếu người dùng nhập chữ thì hệ thống sẽ chặn và ko cho người dùng bấm
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SLHS_tb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            //khi người dùng bấm số và xóa số thì được thao tác
+            //Nếu người dùng nhập chữ thì hệ thống sẽ chặn và ko cho người dùng bấm
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }

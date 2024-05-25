@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,6 +19,16 @@ namespace QuanLyLop
         }
 
         Modify modify = new Modify();
+
+        public bool CheckInformation(string ac) // Check mk va tk
+        {
+            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{1,24}$"); //Ràng buộc tên tài khoản va mk
+        }
+
+        public bool CheckGioiTinh(string ac) 
+        {
+            return Regex.IsMatch(ac, @"^(N|n)(am|u)?$");
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -41,7 +52,7 @@ namespace QuanLyLop
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quản_lí_Lớp_và_Học_SinhDataSet.HocSinh' table. You can move, or remove it, as needed.
-            this.hocSinhTableAdapter1.Fill(this.quản_lí_Lớp_và_Học_SinhDataSet.HocSinh);
+            //this.hocSinhTableAdapter1.Fill(this.quản_lí_Lớp_và_Học_SinhDataSet.HocSinh);
             // TODO: This line of code loads data into the 'quản_lý_lớp_và_sinh_viênDataSet.HocSinh' table. You can move, or remove it, as needed.
             //this.hocSinhTableAdapter.Fill(this.quản_lý_lớp_và_sinh_viênDataSet.HocSinh);
             Modify modyfy = new Modify();
@@ -72,6 +83,32 @@ namespace QuanLyLop
             string gioiTinh = GioiTinh_txb.Text;
             DateTime ngaySinh = dateTimePicker1.Value;
 
+            if (!CheckInformation(tenHS))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(hoHS))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+
+
+            //if (!CheckInformation(gioiTinh))
+            //{
+            //    MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+            //    return;
+            //}
+
+            if (!CheckGioiTinh(gioiTinh))
+            {
+                MessageBox.Show("Vui long nhap male hay female");
+                return;
+            }
+
 
             HocSinh hocsinh = new HocSinh(tenHS, hoHS, gioiTinh, maHS, maLop, ngaySinh);
             if (modify.insertHS(hocsinh))
@@ -97,6 +134,24 @@ namespace QuanLyLop
             int maHS = Int32.Parse(MaHS_txb.Text);
             string gioiTinh = GioiTinh_txb.Text;
             DateTime ngaySinh = dateTimePicker1.Value;
+
+            if (!CheckInformation(tenHS))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(hoHS))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
+
+            if (!CheckInformation(gioiTinh))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản dài 6-24 ký tự, với các ký tự chữ và số, chữ hoa và chữ thường");
+                return;
+            }
 
             HocSinh hocsinh = new HocSinh(tenHS, hoHS, gioiTinh, maHS, maLop, ngaySinh);
 
@@ -124,6 +179,39 @@ namespace QuanLyLop
             {
                 MessageBox.Show("Khong the xoa vao csdl", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void MaLop_txb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            //khi người dùng bấm số và xóa số thì được thao tác
+            //Nếu người dùng nhập chữ thì hệ thống sẽ chặn và ko cho người dùng bấm
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void MaHS_txb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            //khi người dùng bấm số và xóa số thì được thao tác
+            //Nếu người dùng nhập chữ thì hệ thống sẽ chặn và ko cho người dùng bấm
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void GioiTinh_txb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
