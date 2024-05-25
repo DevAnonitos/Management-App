@@ -52,7 +52,7 @@ namespace QuanLyLop
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quản_lí_Lớp_và_Học_SinhDataSet.HocSinh' table. You can move, or remove it, as needed.
-            this.hocSinhTableAdapter1.Fill(this.quản_lí_Lớp_và_Học_SinhDataSet.HocSinh);
+            //this.hocSinhTableAdapter1.Fill(this.quản_lí_Lớp_và_Học_SinhDataSet.HocSinh);
             // TODO: This line of code loads data into the 'quản_lý_lớp_và_sinh_viênDataSet.HocSinh' table. You can move, or remove it, as needed.
             //this.hocSinhTableAdapter.Fill(this.quản_lý_lớp_và_sinh_viênDataSet.HocSinh);
             Modify modyfy = new Modify();
